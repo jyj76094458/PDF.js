@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html dir="ltr" mozdisallowselectionprint>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="google" content="notranslate">
+  <title>PDF 비교 뷰어</title>
+  <link rel="stylesheet" href="./node_modules/pdfjs-dist/web/pdf_viewer.css">
+  <link rel="stylesheet" href="pdfjs.css">
+  <script src="./node_modules/pdfjs-dist/build/pdf.mjs" type="module"></script>
+  <script src="./node_modules/pdfjs-dist/web/pdf_viewer.mjs" type="module"></script>
+</head>
+<body tabindex="1">
+  <div class="controls">
+    <input type="file" id="fileInput1" accept="application/pdf">
+    <label for="zoomSelect1">확대/축소 1:</label>
+    <select id="zoomSelect1">
+      <option value="0.5">50%</option>
+      <option value="0.75">75%</option>
+      <option value="1" selected>100%</option>
+      <option value="1.25">125%</option>
+      <option value="1.5">150%</option>
+      <option value="2">200%</option>
+    </select>
+    <input type="file" id="fileInput2" accept="application/pdf">
+    <label for="zoomSelect2">확대/축소 2:</label>
+    <select id="zoomSelect2">
+      <option value="0.5">50%</option>
+      <option value="0.75">75%</option>
+      <option value="1" selected>100%</option>
+      <option value="1.25">125%</option>
+      <option value="1.5">150%</option>
+      <option value="2">200%</option>
+    </select>
+  </div>
+
+  <div class="pdfViewerContainer">
+    <div id="pageContainer1" class="pdfViewer"></div>
+    <div id="pageContainer2" class="pdfViewer"></div>
+    <div id="comparisonResult"></div>
+  </div>
+
+  <script type="module" src="pdfjs.mjs"></script>
+</body>
+</html>
